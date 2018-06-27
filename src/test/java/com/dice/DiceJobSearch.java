@@ -56,11 +56,11 @@ public class DiceJobSearch {
 		if (countResult > 0) {
 			System.out.println("Keyword :" + keyword + " search returned " + countResult + " results in " + location);
 		} else {
-			System.out.println(
+ 			System.out.println(
 					"Step fail: Keyword : " + keyword + " search returned " + countResult + " results in " + location);
 		}
-		driver.close();
-		System.out.println("TEST COMPLETED - " + LocalDateTime.now());
+		//driver.close();
+		System.out.println("TEST COMPLETED  -  " + LocalDateTime.now());
 
 	}
 

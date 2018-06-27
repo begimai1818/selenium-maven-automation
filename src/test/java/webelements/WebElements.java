@@ -1,5 +1,7 @@
 package webelements;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -56,4 +58,44 @@ public class WebElements {
 		System.out.println(linkNames.toString());
 
 	}
+	
+	@Test
+	public void SeleniumWebElementsForm() {
+		driver.get("https://forms.zohopublic.com/murodil/form/SeleniumWebElements/formperma/eCecYgX4WMcmjxvXVq6UdhA2ABXIoqPAxnAF8H8CCJg");
+		
+		
+		List<WebElement> inputBoxes = driver.findElements(By.xpath("//input[@type='text']"));
+		
+		List<WebElement> dropDowns = driver.findElements(By.tagName("select"));
+		
+		List<WebElement> checkBoxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
+		
+		List<WebElement> radioBoxes = driver.findElements(By.xpath("//input[@type='radio']"));
+		
+		List<WebElement> buttons = driver.findElements(By.tagName("button"));
+		
+		assertEquals(inputBoxes.size(),2);
+		assertEquals(dropDowns.size(),3);
+		assertEquals(checkBoxes.size(),9);
+		assertEquals(radioBoxes.size(),9,"Message will show if it fails");
+		assertEquals(buttons.size(),1,"Message will show if it fails");
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
